@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollable Item List with Buttons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .scrollable-list {
+      width: 360px;
+      height: 300px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow-y: auto;
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .scrollable-list ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .scrollable-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 15px;
+      border-bottom: 1px solid #eee;
+      transition: background-color 0.2s;
+    }
+
+    .scrollable-list li:hover {
+      background-color: #f1f1f1;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn {
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .accept {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .decline {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .scrollable-list li:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Item List</h2>
+<div class="scrollable-list">
+  <ul>
+    <li>
+      Item 1
+      <div class="buttons">
+        <form action="/home/show-requests" method="POST">
+          <input type="hidden" name="item_id" value="1">
+          <input type="hidden" name="action" value="accept">
+          <button type="submit" class="btn accept">Accept</button>
+        </form>
+        <form action="/home/show-requests" method="POST">
+          <input type="hidden" name="item_id" value="1">
+          <input type="hidden" name="action" value="decline">
+          <button type="submit" class="btn decline">Decline</button>
+        </form>
+      </div>
+    </li>
+    <li>
+      Item 2
+      <div class="buttons">
+        <form action="/home/show-requests" method="POST">
+          <input type="hidden" name="item_id" value="2">
+          <input type="hidden" name="action" value="accept">
+          <button type="submit" class="btn accept">Accept</button>
+        </form>
+        <form action="/home/show-requests" method="POST">
+          <input type="hidden" name="item_id" value="2">
+          <input type="hidden" name="action" value="decline">
+          <button type="submit" class="btn decline">Decline</button>
+        </form>
+      </div>
+    </li>
+    <li>
+      Item 3
+      <div class="buttons">
+        <form action="/home/show-requests" method="POST">
+          <input type="hidden" name="item_id" value="3">
+          <input type="hidden" name="action" value="accept">
+          <button type="submit" class="btn accept">Accept</button>
+        </form>
+        <form action="/home/show-requests" method="POST">
+          <input type="hidden" name="item_id" value="3">
+          <input type="hidden" name="action" value="decline">
+          <button type="submit" class="btn decline">Decline</button>
+        </form>
+      </div>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollable Item List</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .scrollable-list {
+      width: 300px;
+      height: 200px;
+      border: 1px solid #ccc;
+      overflow-y: scroll;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    .scrollable-list ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .scrollable-list li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    h2 {
+      margin-bottom: 10px;
+    }
+    
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      padding: 8px 16px;
+      background-color: red;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .content-wrapper {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <button class="back-button" onclick="goToPage()">Back</button>
+
+  <div class="content-wrapper">
+    <h2>Item List</h2>
+    <div class="scrollable-list">
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+        <li>Item 7</li>
+        <li>Item 8</li>
+        <li>Item 9</li>
+        <li>Item 10</li>
+        <li>Item 11</li>
+        <li>Item 12</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function goToPage() {
+      window.location.href = "/home"; 
+    }
+  </script>
+</body>
+</html>

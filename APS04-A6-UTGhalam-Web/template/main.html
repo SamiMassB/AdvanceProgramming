@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Task Manager</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      position: relative;
+    }
+
+    .logout {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .logout button {
+      padding: 8px 16px;
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .options {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .options a {
+      text-decoration: none;
+    }
+
+    .options button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 200px;
+    }
+
+    .options button:hover {
+      background-color: #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <form class="logout" action="./logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+    Welcome <% cout << context["username"]; %>
+  </header>
+
+  <div class="container">
+    <div class="options">
+      <a href="/home/add-task"><button>Add Task</button></a>
+      <a href="/home/add-event"><button>Add Event</button></a>
+      <a href="/home/add-periodic-event"><button>Add Periodic Event</button></a>
+      <a href="/home/add-join-event"><button>Add Join Event</button></a>
+      <a href="/home/edit-task"><button>Edit Task</button></a>
+      <a href="/home/remove-task"><button>Remove Task</button></a>
+      <a href="/home/show-reports"><button>Show Reports</button></a>
+      <a href="/home/show-requests"><button>Show Requests</button></a>
+    </div>
+  </div>
+
+  <script>
+    function logout() {
+      window.location.href = "logout.html"; // or your logout handler
+    }
+  </script>
+
+</body>
+</html>
